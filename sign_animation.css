@@ -1,0 +1,116 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+  margin: auto;
+  margin-top: 200px;
+  width: 100px;
+  height: 200px;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  border: 1px solid blue;
+}
+
+.circle,
+.hidden {
+  position: relative;
+}
+
+.hidden {
+  width: 90px;
+  height: 150px;
+  overflow: hidden;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border: 1px solid red;
+  animation: hidden 0.3s ease-out;
+  left: 5px;
+  bottom: 5px;
+}
+
+.hidden_middle {
+    /* TODO */
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border: 5px solid black;
+  border-radius: 50%;
+  background: #cdd8ff;
+  animation: circle 0.3s ease-out;
+  transform-origin: 50% 50%;
+}
+
+.cricle_container,
+.hidden_container {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.hidden_container {
+  height: 150px;
+  width: 90px;
+}
+
+.cricle_container {
+  height: 100px;
+  width: 100px;
+}
+
+#doc_svg {
+  position: absolute;
+  bottom: 0;
+  /* animation: doc 0.3s ease-out; */
+}
+
+#pen_with_path {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+@keyframes hidden {
+  from {
+    width: 10px;
+    height: 10px;
+    transform: translateY(25px);
+  }
+
+  to {
+    height: 150px;
+    width: 90px;
+    transform: translateY(0);
+  }
+}
+
+@keyframes circle {
+  from {
+    width: 10px;
+    height: 10px;
+  }
+
+  to {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+@keyframes doc {
+  from {
+    transform: translateY(300px);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
+}
